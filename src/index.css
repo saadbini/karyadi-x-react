@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.events-slider .slick-prev,
+.events-slider .slick-next {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.events-slider .slick-prev {
+  left: -50px;
+}
+
+.events-slider .slick-next {
+  right: -50px;
+}
+
+.events-slider .slick-prev:hover,
+.events-slider .slick-next:hover {
+  background-color: #FF6B4A;
+}
+
+.events-slider .slick-prev:before,
+.events-slider .slick-next:before {
+  font-size: 24px;
+  line-height: 1;
+  opacity: 1;
+  color: white;
+}
+

@@ -1,0 +1,130 @@
+Organization Table 
+
+Id (integer)
+Name (text)
+OrganizationDescription (text)
+Logo (text - url)
+NoOfEmployees(Number)
+WebsiteUrl(text - url)
+IndustryId (Foreign Key reference to IndustryCategory table)
+UserId (Foreign Key reference to Users)
+
+--------------------------------------------------
+
+IndustryCategory Table
+
+Id (integer)
+Category (text)
+Image (text)
+
+
+---------------------------------------------------
+
+Event Table
+
+id (integer)
+Name (text)
+Details (text)
+Image (text)
+Event Type (text) 
+Event Status (text) 
+Event Collaborator (Foreign Key reference to Event Collaborator table) 
+Event Sponsor (Id - Foreign key reference to Event Sponsor Table)  
+Event Partner (Id) 
+Event Organizer (id)
+Attendance Status - (Foreign key reference to Attendance table) 
+Agenda (text) 
+Agenda Speaker (Id - Foreign Key reference to Speaker table) 
+
+----------------------------------------------------
+
+Event Collaborator Table
+
+id (integer) 
+Event_id (foreign key reference to events table) 
+Organization_id (foreign key reference to organization table)
+
+
+----------------------------------------------------
+
+Event Sponsor Table
+
+id (integer) 
+EventOrganizationId (reference to Organization table) 
+Event Sponsor Tier (text) 
+Uploaded by (reference to User id)
+
+
+----------------------------------------------------
+
+Event Partner Table
+
+id (integer) 
+Event Organization Table (Foreign key reference to Event Organization)
+Event Partner Tier (Text) 
+Uploaded by (foreign key reference to User id)
+
+
+----------------------------------------------------
+
+Attendance Table
+
+id (integer) 
+User Id (integer - reference to Users table) 
+Event id (integer - reference to event table) 
+Attendance Status (text)
+Created_on (timestamp) 
+
+-----------------------------------------------------
+
+Event Organizer Table
+
+id (integer)
+OrganizerId (integer - reference to Organizer Table)
+isMainOrganizer (Boolean)
+
+-----------------------------------------------------
+Speaker Table
+
+id (integer)
+UserId (integer - reference to Users table)
+Designation (text)
+Description (text)
+AgendaId (integer - reference to Agenda table)
+
+-----------------------------------------------------
+
+Agenda Table 
+
+id (integer)
+Name (text)
+Description (text)
+StartTime (timestamp)
+EndTime (timestamp)
+SlidoUrl (text)
+EventId (integer - reference to Event table)
+
+-----------------------------------------------------
+
+
+
+This is for a JSON file to be stored for dropdown options when selected in would be passed as text: 
+
+Event Type : (Conference, Seminar, Workshops, Forum, ProductLaunch, CSR,Networking,SalesAndClientFocused)
+Event Status: (Ongoing, Past,Cancelled,Closed,Rescheduled,Sold Out, Draft,Archieved,Rejected,Postponed,Pending)
+Event Partner Tier: (Strategic, Telecom, Knowledge, Supporting, Collaboration, Partner)
+Event Sponsor Tier: (Platinum, Gold, Silver)
+Attendance Status (Going, NotGoing,Maybe,Interested)
+
+-----------------------------------------------------
+
+job_post Table 
+
+id (integer) 
+job_title (text)
+
+
+
+
+
+
